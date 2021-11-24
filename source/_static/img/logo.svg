@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="191.93852mm"
+   height="211.55998mm"
+   viewBox="0 0 191.93852 211.55998"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="logo.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35278146"
+     inkscape:cx="217.58522"
+     inkscape:cy="511.47557"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-23.139172,-12.838754)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:32.7866px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.819666"
+       x="170.44199"
+       y="47.578217"
+       id="text837"
+       transform="scale(0.70316906,1.4221331)"><tspan
+         sodipodi:role="line"
+         id="tspan835"
+         x="170.44199"
+         y="47.578217"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32.7866px;font-family:'Noto Sans Arabic';-inkscape-font-specification:'Noto Sans Arabic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.819666">BOSSM8</tspan><tspan
+         sodipodi:role="line"
+         x="170.44199"
+         y="92.141678"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32.7866px;font-family:'Noto Sans Arabic';-inkscape-font-specification:'Noto Sans Arabic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.819666"
+         id="tspan843">SPHINX RTD</tspan><tspan
+         sodipodi:role="line"
+         x="170.44199"
+         y="136.70514"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32.7866px;font-family:'Noto Sans Arabic';-inkscape-font-specification:'Noto Sans Arabic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.819666"
+         id="tspan841">Template</tspan></text>
+  </g>
+</svg>
