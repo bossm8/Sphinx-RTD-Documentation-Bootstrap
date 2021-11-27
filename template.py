@@ -1,3 +1,5 @@
+import datetime
+
 from watchdog.observers import Observer
 from watchdog.events import PatternMatchingEventHandler
 from argparse import ArgumentParser
@@ -7,17 +9,9 @@ from subprocess import run
 from httpwatcher import HttpWatcherServer
 from tornado.ioloop import IOLoop
 
+_template_files = ['source/index.md', 'source/conf.py']
 _patterns = ['*.md', '*.rst', '*.txt']
 _path = Path(__file__).parent.resolve()
-
-_server = HttpWatcherServer(
-    static_root='build/html',
-    port=3000,
-    host='127.0.0.1',
-    watcher_interval=2.0,
-    recursive=True,
-    open_browser=True
-)
 
 
 class BuildHandler(PatternMatchingEventHandler):
@@ -36,8 +30,17 @@ def build():
 
 def watch():
     if not exists("build/html"):
+        setup()
         build()
 
+    _server = HttpWatcherServer(
+        static_root='build/html',
+        port=3000,
+        host='127.0.0.1',
+        watcher_interval=2.0,
+        recursive=True,
+        open_browser=True
+    )
     _server.listen()
 
     observer = Observer()
@@ -56,7 +59,20 @@ def watch():
 
 
 def setup():
-    pass
+    name, authors = None, None
+    for file in _template_files:
+        with open(file, 'rt') as f:
+            data = f.read()
+        if '<PROJECT_NAME>' in data:
+            if name is None:
+                name = input("Enter the project name: ")
+                authors = input("Enter the author(s) - comma separated: ")
+            data = data. \
+                replace('<PROJECT_NAME>', name). \
+                replace('<YEAR>', str(datetime.date.today().year)). \
+                replace('<AUTHORS>', authors)
+            with open(file, 'wt') as f:
+                f.write(data)
 
 
 def main():

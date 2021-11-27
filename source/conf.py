@@ -69,17 +69,16 @@ html_theme_options = {
 # Some customizations on styles - relative path to _static
 html_css_files = []
 
-# Show the link to gitlab on the top right corner
 html_context = {
-    # Show the gitlab icon and link 
-    'display_gitlab': True,
+    # Show a custom url in the top right corner
+    'display_url': True,
     # Do not show source code in this webpage
     'show_source': False,
-    # Text which is shown on the link to gitlab
+    # Text which is shown on the link
     'display_text': 'Feature/Bug Report',
-    'gitlab_host': '<GITLAB_HOST>',
-    'repo_uri': '<REPO_URI>',
-    'conf_py_path': '/'
+    # Font Awesome icon name i.e. gitlab (will be rendered as fa-gitlab)
+    # https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free
+    'display_icon': 'bug',
 }
 
 # -- Options for HTML output -------------------------------------------------

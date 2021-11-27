@@ -6,35 +6,12 @@ This is a template to bootstrap documentations based on
 ## Usage
 
 * Fork this project into your own namespace.
-* Clone the just forked repo.
-* Move `.env.template` to `.env`
-* Edit `.env` (possible values are documented there)
-* Run setup.sh 
-  ```bash
-  /bin/bash setup.sh
-  ``` 
-  or 
-  ```bash
-  chmod 774 setup.sh
-  ./setup.sh
-  ``` 
-  This will install all dependencies and run an initial build. 
-* Open the generated documentation 
-  ```bash
-  xdg-open build/html/index.html
-  ```
-* For following builds activate the virtual environment and run make
-  ```bash
-  source venv/bin/activate
-  make html
-  ```
-* Source code can be written either with markdown (`.md`) or with restructured text (`.rst`).
-  All source code files are located in `source`.
+* Clone the just forked repo. 
+* Initialize and watch the project
 
-## Watch
-
-Run `python3 sphinx.py watch`, this will watch for file changes, automatically build and then refresh
-the written documentation.
+  ```bash
+  make watch
+  ``` 
 
 ## Configuration and Dependencies
 
