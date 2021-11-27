@@ -71,9 +71,9 @@ html_css_files = []
 
 html_context = {
     # Show a custom url in the top right corner
-    'display_url': True,
+    'display_link': True,
     # Do not show source code in this webpage
-    'show_source': False,
+    # 'show_source': False,
     # Text which is shown on the link
     'display_text': 'Feature/Bug Report',
     # Font Awesome icon name i.e. gitlab (will be rendered as fa-gitlab)
