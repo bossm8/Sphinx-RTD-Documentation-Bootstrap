@@ -1,5 +1,12 @@
-import datetime
+#!/usr/bin/env python
 
+"""
+Sphinx RTD Documentation Template
+Helper script to setup and automatically watch for changes while editing.
+
+@Licence: MIT
+@Author: Boss Marco <bossm8@hotmail.com>
+"""
 from watchdog.observers import Observer
 from watchdog.events import PatternMatchingEventHandler
 from argparse import ArgumentParser
@@ -8,6 +15,7 @@ from os.path import join, exists
 from subprocess import run
 from httpwatcher import HttpWatcherServer
 from tornado.ioloop import IOLoop
+from datetime import date
 
 _template_files = ['source/index.md', 'source/conf.py']
 _patterns = ['*.md', '*.rst', '*.txt']
@@ -23,12 +31,11 @@ class BuildHandler(PatternMatchingEventHandler):
         build()
 
 
-def build():
+def build() -> None:
     run(['make', 'html'], cwd=_path)
-    pass
 
 
-def watch():
+def watch() -> None:
     if not exists("build/html"):
         setup()
         build()
@@ -58,18 +65,19 @@ def watch():
         observer.join()
 
 
-def setup():
+def setup() -> None:
     name, authors = None, None
     for file in _template_files:
         with open(file, 'rt') as f:
             data = f.read()
+        # Do only ask for input if there is still templating stuff in the files
         if '<PROJECT_NAME>' in data:
             if name is None:
                 name = input("Enter the project name: ")
                 authors = input("Enter the author(s) - comma separated: ")
             data = data. \
                 replace('<PROJECT_NAME>', name). \
-                replace('<YEAR>', str(datetime.date.today().year)). \
+                replace('<YEAR>', str(date.today().year)). \
                 replace('<AUTHORS>', authors)
             with open(file, 'wt') as f:
                 f.write(data)
