@@ -33,7 +33,8 @@ release = '1.0.0'
 extensions = [
     # Official supported markdown parser 
     # https://myst-parser.readthedocs.io/en/latest/sphinx/intro.html
-    'myst_parser'
+    'myst_parser',
+    'sphinx_copybutton'
 ]
 
 # Configure file extensions and formats 
